@@ -60,7 +60,7 @@ export function RegisterPage() {
         }
     };
     return (
-        <LayoutAuth title={'Sign in to your account'}>
+        <LayoutAuth title={'Get started'} subtitle={'Create an account and take control of your productivity.'} >
             <form onSubmit={handleSubmit(onSubmit)} className={'!space-y-3'}>
                 <div className={'w-full'}>
                     <Label htmlFor={'name'}>

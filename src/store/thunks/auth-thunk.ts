@@ -7,6 +7,6 @@ export const fetchUser = createAsyncThunk(
         const response = await api.get('/api/me', {
             headers: {Authorization: `Bearer ${token}`}
         })
-        return response.data.user
+        return response.data
     }
 )

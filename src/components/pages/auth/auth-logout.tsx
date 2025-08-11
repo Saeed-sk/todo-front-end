@@ -4,8 +4,9 @@ import {useNavigate} from "react-router";
 import {useDispatch} from "react-redux";
 import type {AppDispatch} from "../../../store/store.ts";
 import {changeUser} from "../../../store/slices/auth-slice.ts";
+import {cn} from "../../../lib/utils.ts";
 
-export function AuthLogout({children}: { children: ReactNode }) {
+export function AuthLogout({children, className}: { children: ReactNode, className?: string }) {
     const token = localStorage.getItem("token");
     const dispatch = useDispatch<AppDispatch>();
     const navigate = useNavigate();
@@ -21,7 +22,7 @@ export function AuthLogout({children}: { children: ReactNode }) {
     }
 
     return (
-        <div onClick={logout}>
+        <div className={cn('cursor-pointer', className)} onClick={logout}>
             {children}
         </div>
     )

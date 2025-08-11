@@ -2,7 +2,8 @@ export interface UserType {
     id: string
     name: string
     email: string
-    phone?: string
+    phone?: string | null
+    avatar?: string | null
     role?: string
 }
 

@@ -14,7 +14,7 @@ export function AuthLoader() {
                 dispatch(fetchUser(token));
             }
         } else {
-            dispatch(changeUser({user: null, token: null}));
+            dispatch(changeUser({token: null}));
         }
     }, [dispatch]);
 

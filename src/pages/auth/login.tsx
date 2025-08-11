@@ -50,7 +50,7 @@ export function LoginPage() {
         }
     };
     return (
-        <LayoutAuth>
+        <LayoutAuth title={'Welcome back'} subtitle={'Sign in to stay on top of your tasks and get things done.'}>
             <form onSubmit={handleSubmit(onSubmit)} className={'!space-y-3'}>
                 <div className={'w-full'}>
                     <Label htmlFor={'email'}>

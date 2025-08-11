@@ -13,17 +13,23 @@ import {LoginPage} from "./pages/auth/login.tsx";
 import {RegisterPage} from "./pages/auth/register.tsx";
 import {ListPage} from "./pages/list";
 import {HomePage} from "./pages/home";
+import {ErrorBoundary} from "./error-boundary.tsx";
+import {PasswordPage} from "./pages/password";
+import {ProfilePage} from "./pages/profile";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <LayoutMain/>,
+        errorElement: <ErrorBoundary/>,
+        hasErrorBoundary: true,
         children: [
             {index: true, element: <HomePage/>},
             {path: 'list', element: <ListPage/>},
             {path: 'login', element: <LoginPage/>},
             {path: 'register', element: <RegisterPage/>},
-            {path: 'list', element: <RegisterPage/>},
+            {path: 'profile', element: <ProfilePage/>},
+            {path: 'password', element: <PasswordPage/>},
         ],
     },
 ])
